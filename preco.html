@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Netflux</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/9650a62e47.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Quicksand:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="logo">
+        <h1>Netflux</h1>
+        <img
+          id="header-img"
+          src="https://i.ibb.co/F4LjD10/netfluximg.png"
+          alt="icon filme"
+        />
+        <button id="theme-toggle">Dark Theme</button>
+      </div> 
+      
+      <nav id="nav-bar">
+        <ul id="nav-links">
+          <li><a href="/index.html" class="nav-link">Menu Principal</a></li>
+          <li><a href="/media.html" class="nav-link">Filmes e Séries</a></li>
+          <li><a href="/funcionamento.html" class="nav-link">Como funciona</a></li>
+          <li><a href="/preco.html" class="nav-link">Preço</a></li>
+          <li><a href="/about.html" class="nav-link">Sobre nós</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+    
+      <div id="details">
+        <section id="vantagens">
+            <div class="imagem">
+            
+                <div class="img">
+              <img
+                class="icon"
+                src="precos.png"
+                alt="img novidades"
+              />
+            </div>
+            <div class="feature-content">
+              <h2>Os nossos preços</h2>
+              <p>
+                Veja já qual o melhor plano para si! <b>Não se esqueça que tem sempre 30 dias grátis para experimentar!</b>
+              </p>
+            </div>
+          </div>
+            
+        </section>
+        <section id="pricing">
+          <div class="option">
+            <span><b>Individual</b></span>
+            <p>
+              - Conta individual <br />
+              - 1 ligação disponível <br />
+              - Acesso a todos os filmes e séries <br /><br />
+              <hr>
+            <span class="precos">15.90€/mês</span>
+            </p>
+          </div>
+          <div class="option">
+            <span><b>Individual Plus</b></span>
+            <p>
+                - Conta individual <br />
+                - 2 ligações disponíveis <br />
+                - Acesso a todos os filmes e séries <br />
+                - Acesso a conteúdo VIP
+                <hr>
+                <span class="precos">21.90€/mês</span>
+            </p>
+          </div>
+          <div class="option">
+            <span><b>Familiar</b></span>
+            <p>
+                - Conta familiar <br />
+                - 5 ligações disponíveis <br />
+                - Acesso a todos os filmes e séries <br />
+                - Acesso a conteúdo VIP
+                <hr>
+                <span class="precos">29.90€/mês</span>
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer id="footer">
+        <hr>
+        <p id="copyright">&copy; Francisco Vieira - Universidade Aberta</p>
+    </footer>
+    <script>
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            var root = document.documentElement;
+            var lightBackground = getComputedStyle(root).getPropertyValue('--light-background');
+            var currentBackground = getComputedStyle(root).getPropertyValue('--background-color');
+            if (currentBackground == lightBackground) {
+                root.style.setProperty('--background-color', getComputedStyle(root).getPropertyValue('--dark-background'));
+                root.style.setProperty('--text-color', getComputedStyle(root).getPropertyValue('--dark-text'));
+            } else {
+                root.style.setProperty('--background-color', lightBackground);
+                root.style.setProperty('--text-color', getComputedStyle(root).getPropertyValue('--light-text'));
+            }
+        });
+    </script>
+  </body>
+</html>

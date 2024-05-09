@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Netflux</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/9650a62e47.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Quicksand:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="logo">
+        <h1>Netflux</h1>
+        <img
+          id="header-img"
+          src="https://i.ibb.co/F4LjD10/netfluximg.png"
+          alt="icon filme"
+        />
+        <button id="theme-toggle">Dark Theme</button>
+      </div> 
+      
+      <nav id="nav-bar">
+        <ul id="nav-links">
+          <li><a href="/index.html" class="nav-link">Menu Principal</a></li>
+          <li><a href="/media.html" class="nav-link">Filmes e Séries</a></li>
+          <li><a href="/funcionamento.html" class="nav-link">Como funciona</a></li>
+          <li><a href="/preco.html" class="nav-link">Preço</a></li>
+          <li><a href="/about.html" class="nav-link">Sobre nós</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      
+      <div id="details">
+        <section id="vantagens">
+            <div class="imagem">
+                <div class="img">
+              <img
+                class="icon"
+                src="https://i.ibb.co/1LmVpkZ/playerimg.png"
+                alt="img FAQ"
+              />
+            </div>
+            <div class="feature-content">
+              <h2>F.A.Q.</h2>
+              <p>
+                1 - Como aderir? <br />
+                Basta instalar a nossa aplicação e seguir os passos de registo. <br />
+                2 - Como posso vizualizar conteúdos? <br />
+                Basta clicar no filme ou série que deseja ver e clicar em "ver". <br />
+                3 - Posso partilhar a minha conta? <br />
+                Sim, pode partilhar a sua conta com até 5 pessoas selecionando o plano familiar. <br />
+                <hr>
+              </p>
+            </div>
+             
+        </section>
+        <section id="video-container">
+          <iframe
+            id="video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/fodWdCDdElM?si=-1Z--CM804odEtP0"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </section>
+        
+      </div>
+    </main>
+    <footer id="footer">
+        <hr>
+        <p id="copyright">&copy; Francisco Vieira - Universidade Aberta</p>
+    </footer>
+    <script>
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            var root = document.documentElement;
+            var lightBackground = getComputedStyle(root).getPropertyValue('--light-background');
+            var currentBackground = getComputedStyle(root).getPropertyValue('--background-color');
+            if (currentBackground == lightBackground) {
+                root.style.setProperty('--background-color', getComputedStyle(root).getPropertyValue('--dark-background'));
+                root.style.setProperty('--text-color', getComputedStyle(root).getPropertyValue('--dark-text'));
+            } else {
+                root.style.setProperty('--background-color', lightBackground);
+                root.style.setProperty('--text-color', getComputedStyle(root).getPropertyValue('--light-text'));
+            }
+        });
+    </script>
+  </body>
+</html>
